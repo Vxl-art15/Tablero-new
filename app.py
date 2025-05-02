@@ -1,22 +1,22 @@
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
-st.set_page_config(page_title="Lienzo Mágico", page_icon="✨")
-st.title("🎀 Lienzo Mágico de Colores 🎀")
+st.set_page_config(page_title="Tablero de Creación Encantada", page_icon="🖼️")
+st.title("Universo Cromático Encantado")
 
 with st.sidebar:
-    st.subheader("🌸 Opciones del Lienzo 🌸")
+    st.subheader("Menú de Creación Mágica")
     
     drawing_mode = st.selectbox(
-        "🧚‍♀️ Elige tu herramienta mágica:",
+        "🧚‍♀️ Selecciona tu artefacto encantado:",
         ("freedraw", "line", "rect", "circle", "transform", "polygon", "point"),
     )
 
-    stroke_width = st.slider('✨ Grosor del pincel mágico ✨', 1, 30, 10)
-    stroke_color = st.color_picker("🎨 Elige tu color favorito:", "#FF69B4")
+    stroke_width = st.slider('Poder del Trazo Encantado', 1, 30, 10)
+    stroke_color = st.color_picker("Selecciona tu tono encantado:", "#FF69B4")
     
-    bg_base_color = st.color_picker("🌈 Color del fondo:", "#FFF0F5")
-    bg_opacity = st.slider("🌫️ Transparencia del fondo (0 = invisible, 1 = opaco)", 0.0, 1.0, 1.0, 0.05)
+    bg_base_color = st.color_picker("Tono del Telón Mágico:", "#FFF0F5")
+    bg_opacity = st.slider("Fondo Etéreo (0 = invisible, 1 = opaco)", 0.0, 1.0, 1.0, 0.05)
     
     # Convertir color HEX a rgba con opacidad
     def hex_to_rgba(hex_color, alpha):
